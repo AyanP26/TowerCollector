@@ -1,21 +1,36 @@
 [gd_scene format=3 uid="uid://6vhp7hrpbqei"]
 
-[ext_resource type="Script" uid="uid://d2kuu35cqwfvd" path="res://player.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://de35i1b2cyumh" path="res://idlePlayer.png" id="2_hqtel"]
-[ext_resource type="Texture2D" uid="uid://cfbmwg5h6lj6t" path="res://playerWalk1.png" id="3_sweqy"]
-[ext_resource type="Texture2D" uid="uid://domwx3q1w8ja5" path="res://playerWalk2.png" id="4_2hs0m"]
+[ext_resource type="Script" uid="uid://d2kuu35cqwfvd" path="res://Scripts/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://ley5f643vjig" path="res://playerAttack1.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bbcalc4fqloee" path="res://playerWalk1.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://28gdxwxog0m6" path="res://playerWalk2.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://b5go56kdwordf" path="res://playerWalk3.png" id="5_dw050"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b26j0"]
+load_path = "res://.godot/imported/idlePlayer.png-079dd256eb34abbe8ab34ffa23269def.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1jxqw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_hqtel")
+"texture": SubResource("CompressedTexture2D_b26j0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_sweqy")
+"texture": ExtResource("2_sweqy")
+}],
+"loop": true,
+"name": &"playerAttack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_2hs0m")
+"texture": ExtResource("4_1jxqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dw050")
 }],
 "loop": true,
 "name": &"playerWalk",

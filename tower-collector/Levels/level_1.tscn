@@ -15,7 +15,7 @@ script = ExtResource("1_3mhv4")
 enemy = ExtResource("2_rf6l5")
 
 [node name="Player" parent="." unique_id=661569717 instance=ExtResource("3_syshm")]
-position = Vector2(58, 63)
+position = Vector2(46, 87)
 
 [node name="EnemyTimer" type="Timer" parent="." unique_id=978226088]
 wait_time = 0.5
@@ -25,8 +25,13 @@ position = Vector2(-354.30112, -987.04504)
 scale = Vector2(4.4591966, 5.863636)
 curve = SubResource("Curve2D_hbghi")
 
-[node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemyPath" unique_id=832085672]
+[node name="EnemyPathFollow" type="PathFollow2D" parent="EnemyPath" unique_id=832085672]
 position = Vector2(79.454025, 223.58908)
+
+[node name="Enemy" parent="EnemyPath/EnemyPathFollow" unique_id=2090435787 instance=ExtResource("2_rf6l5")]
+position = Vector2(-21.528542, -6.8217087)
+scale = Vector2(0.22425564, 0.17054264)
+gravity_scale = 0.0
 
 [node name="ScoreTimer" type="Timer" parent="." unique_id=1178953772]
 

@@ -14,17 +14,11 @@ func _process(delta: float) -> void:
 func _on_enemy_timer_timeout() -> void:
 	var enemy = enemy.instantiate()
 	
-	var enemy_spawn_location = $EnemyPath/EnemySpawnLocation
+	enemy.position = $EnemyPath/EnemyPathFollow.position
 	
-	enemy.position = enemy_spawn_location.position
 	
-	var direction = enemy_spawn_location.rotation + PI/2
-	
-	direction += randf_range(-PI/4, PI/4)
-	enemy.rotation = direction
 	
 	var velocity = Vector2(randf_range(150.0, 250.0), 0.0)
-	enemy.linear_velocity = velocity.rotated(direction)
 	
 	add_child(enemy)	
 

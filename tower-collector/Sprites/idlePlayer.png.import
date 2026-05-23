@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< Updated upstream:tower-collector/playerWalk3.png.import
-uid="uid://b5go56kdwordf"
-path="res://.godot/imported/playerWalk3.png-08544daef94e8c581be0ef2471a69ba1.ctex"
-========
-uid="uid://de35i1b2cyumh"
+uid="uid://bl81xbspoludl"
 path="res://.godot/imported/idlePlayer.png-456e1a5fe33354d487c65ffe5d29a263.ctex"
->>>>>>>> Stashed changes:tower-collector/Sprites/idlePlayer.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< Updated upstream:tower-collector/playerWalk3.png.import
-source_file="res://playerWalk3.png"
-dest_files=["res://.godot/imported/playerWalk3.png-08544daef94e8c581be0ef2471a69ba1.ctex"]
-========
 source_file="res://Sprites/idlePlayer.png"
 dest_files=["res://.godot/imported/idlePlayer.png-456e1a5fe33354d487c65ffe5d29a263.ctex"]
->>>>>>>> Stashed changes:tower-collector/Sprites/idlePlayer.png.import
 
 [params]
 

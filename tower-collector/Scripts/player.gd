@@ -5,6 +5,11 @@ var screen_size
 
 func attack() -> void:
 	print("attack")
+	# Attack Function Here
+	
+func build() -> void:
+	print("build")
+	# Build Function Here
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,15 +30,19 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
 		if vel.length() == 0:
 			attack()
+	if Input.is_action_just_pressed("build"):
+		if vel.length() == 0:
+			build()
 		
-	if vel.length() > 0:
+	if Input.is_action_just_pressed("build"):
+		$AnimatedSprite2D.play("playerBuild")
+	elif vel.length() > 0:
 		vel = vel.normalized() * speed
 		$AnimatedSprite2D.play("playerWalk")
+	elif Input.is_action_just_pressed("attack"):
+		$AnimatedSprite2D.play("playerAttack")
 	else:
-		if Input.is_action_just_pressed("attack"):
-			$AnimatedSprite2D.play("playerAttack")
-		else:
-			if not $AnimatedSprite2D.animation == "playerAttack":
+		if not $AnimatedSprite2D.animation == "playerAttack" and not $AnimatedSprite2D.animation == "playerBuild":
 				$AnimatedSprite2D.stop()
 		
 	position += vel * delta

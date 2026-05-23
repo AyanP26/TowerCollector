@@ -10,15 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://0c7832o335ob" path="res://Sprites/Player/playerWalk2.png" id="7_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://darei2b1wcbll" path="res://Sprites/Player/playerBuild2.png" id="7_n7ghd"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dw050"]
-load_path = "res://.godot/imported/idlePlayer.png-456e1a5fe33354d487c65ffe5d29a263.ctex"
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_1jxqw"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_dw050")
-}, {
 "duration": 1.0,
 "texture": ExtResource("3_1jxqw")
 }, {
@@ -29,7 +23,10 @@ animations = [{
 "texture": ExtResource("5_b26j0")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_dw050")
+"texture": ExtResource("4_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
 }],
 "loop": false,
 "name": &"playerAttack",
@@ -101,7 +98,7 @@ script = ExtResource("1_4flbx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1464921673]
 position = Vector2(57, 52)
 sprite_frames = SubResource("SpriteFrames_1jxqw")
-animation = &"playerAttack"
+animation = &"playerWalk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2134864919]
 position = Vector2(61.5, 51)

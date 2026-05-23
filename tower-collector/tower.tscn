@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://pv0m3o22rt5c"]
+
+[ext_resource type="Script" uid="uid://bgvdkhnc8x2ox" path="res://tower.gd" id="1_k1sas"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnc73"]
+
+[node name="Tower" type="Area2D" unique_id=1972150108]
+script = ExtResource("1_k1sas")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1882600360]
+shape = SubResource("RectangleShape2D_dnc73")

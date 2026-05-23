@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h7126ccnv83t"
-path="res://.godot/imported/enemy2.png-378e85ff2e1eeada62290caab6e315e6.ctex"
+uid="uid://550iqehaafxn"
+path="res://.godot/imported/orangetower.png-639c33d845df190cc2f12448737e4fac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/enemy2.png"
-dest_files=["res://.godot/imported/enemy2.png-378e85ff2e1eeada62290caab6e315e6.ctex"]
+source_file="res://Sprites/Tower/orangetower.png"
+dest_files=["res://.godot/imported/orangetower.png-639c33d845df190cc2f12448737e4fac.ctex"]
 
 [params]
 

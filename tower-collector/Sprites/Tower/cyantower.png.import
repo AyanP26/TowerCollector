@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqt8lih4ebsf5"
-path="res://.godot/imported/tower2ndpart.png-a7aac599daa6cf51e46e8d3bb7422f73.ctex"
+uid="uid://b6bx8uwgjd667"
+path="res://.godot/imported/cyantower.png-72e382a61845fa68f6eca46bf810a3b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tower2ndpart.png"
-dest_files=["res://.godot/imported/tower2ndpart.png-a7aac599daa6cf51e46e8d3bb7422f73.ctex"]
+source_file="res://Sprites/Tower/cyantower.png"
+dest_files=["res://.godot/imported/cyantower.png-72e382a61845fa68f6eca46bf810a3b5.ctex"]
 
 [params]
 

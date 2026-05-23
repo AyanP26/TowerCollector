@@ -11,8 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var blueprint = blueprint.instantiate()
 	add_child(blueprint)
-
-
+	
 func _on_enemy_timer_timeout() -> void:
 	var enemy = enemy.instantiate()
 	

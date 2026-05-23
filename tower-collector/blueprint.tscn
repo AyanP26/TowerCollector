@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dghjk8edy0bn8"]
 
 [ext_resource type="Script" uid="uid://dvb3ineoug5u6" path="res://blueprint.gd" id="1_3ufgi"]
-[ext_resource type="Texture2D" uid="uid://ba3p83y10878u" path="res://blueprint.png" id="1_cgjvu"]
+[ext_resource type="Texture2D" uid="uid://ba3p83y10878u" path="res://Sprites/Prints/blueprint.png" id="1_cgjvu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnpej"]
 size = Vector2(47, 38)

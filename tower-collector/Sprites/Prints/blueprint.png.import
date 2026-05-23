@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://darei2b1wcbll"
-path="res://.godot/imported/playerBuild2.png-9e44c8a0b8298c24cafe9eb53a7fead9.ctex"
+uid="uid://ba3p83y10878u"
+path="res://.godot/imported/blueprint.png-4d226defc5eca2fda9ebf869da2f564e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/playerBuild2.png"
-dest_files=["res://.godot/imported/playerBuild2.png-9e44c8a0b8298c24cafe9eb53a7fead9.ctex"]
+source_file="res://Sprites/Prints/blueprint.png"
+dest_files=["res://.godot/imported/blueprint.png-4d226defc5eca2fda9ebf869da2f564e.ctex"]
 
 [params]
 

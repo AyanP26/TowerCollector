@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba3p83y10878u"
-path="res://.godot/imported/blueprint.png-fae6fcfd7771ecda904508076958a826.ctex"
+uid="uid://c3ytsaqpsoerw"
+path="res://.godot/imported/playerAttack2.png-94e9e723400d472e6d15334b8e80bf33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blueprint.png"
-dest_files=["res://.godot/imported/blueprint.png-fae6fcfd7771ecda904508076958a826.ctex"]
+source_file="res://Sprites/Player/playerAttack2.png"
+dest_files=["res://.godot/imported/playerAttack2.png-94e9e723400d472e6d15334b8e80bf33.ctex"]
 
 [params]
 

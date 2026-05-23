@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://2tk0ivmxvixl" path="res://Scripts/level_1.gd" id="1_3mhv4"]
 [ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://enemy.tscn" id="2_rf6l5"]
 [ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://player.tscn" id="3_syshm"]
+[ext_resource type="Script" uid="uid://dtuu7uplj22xk" path="res://Levels/enemy_path.gd" id="4_rf6l5"]
 
 [sub_resource type="Curve2D" id="Curve2D_hbghi"]
 _data = {
@@ -27,11 +28,9 @@ curve = SubResource("Curve2D_hbghi")
 
 [node name="EnemyPathFollow" type="PathFollow2D" parent="EnemyPath" unique_id=832085672]
 position = Vector2(79.454025, 223.58908)
-
-[node name="Enemy" parent="EnemyPath/EnemyPathFollow" unique_id=2090435787 instance=ExtResource("2_rf6l5")]
-position = Vector2(-21.528542, -6.8217087)
-scale = Vector2(0.22425564, 0.17054264)
-gravity_scale = 0.0
+rotates = false
+loop = false
+script = ExtResource("4_rf6l5")
 
 [node name="ScoreTimer" type="Timer" parent="." unique_id=1178953772]
 
@@ -41,6 +40,13 @@ one_shot = true
 
 [node name="StartPosition" type="Marker2D" parent="." unique_id=1335761570]
 position = Vector2(240, 450)
+
+[node name="Enemy" parent="." unique_id=2090435787 instance=ExtResource("2_rf6l5")]
+position = Vector2(-81, 274)
+scale = Vector2(0.99999994, 1)
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
 
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]

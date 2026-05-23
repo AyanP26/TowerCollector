@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cmc1pnouhwv40"]
 
-[ext_resource type="Texture2D" uid="uid://diygtimmsckrm" path="res://greenprint.png" id="1_guom7"]
+[ext_resource type="Texture2D" uid="uid://diygtimmsckrm" path="res://Sprites/Prints/greenprint.png" id="1_guom7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sulsx"]
 

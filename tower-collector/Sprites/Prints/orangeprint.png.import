@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddvgx8ycckqpt"
-path="res://.godot/imported/purpletower.png-199518c51aa345ff1e3a9d2d8ad78067.ctex"
+uid="uid://ckqtcox211vjo"
+path="res://.godot/imported/orangeprint.png-b351e78a3e8ab5392e6fe151cd8d7f44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://purpletower.png"
-dest_files=["res://.godot/imported/purpletower.png-199518c51aa345ff1e3a9d2d8ad78067.ctex"]
+source_file="res://Sprites/Prints/orangeprint.png"
+dest_files=["res://.godot/imported/orangeprint.png-b351e78a3e8ab5392e6fe151cd8d7f44.ctex"]
 
 [params]
 

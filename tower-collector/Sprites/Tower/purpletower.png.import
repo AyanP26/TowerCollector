@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba8j0pppixwak"
-path="res://.godot/imported/arrow.png-9a52328c9c8f79a188b7fabb13b1f3fc.ctex"
+uid="uid://ddvgx8ycckqpt"
+path="res://.godot/imported/purpletower.png-7d9bebe2182bba1794c165466697b679.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arrow.png"
-dest_files=["res://.godot/imported/arrow.png-9a52328c9c8f79a188b7fabb13b1f3fc.ctex"]
+source_file="res://Sprites/Tower/purpletower.png"
+dest_files=["res://.godot/imported/purpletower.png-7d9bebe2182bba1794c165466697b679.ctex"]
 
 [params]
 

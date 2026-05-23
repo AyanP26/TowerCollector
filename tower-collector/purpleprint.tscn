@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://gwv2x8udxboy"]
 
-[ext_resource type="Texture2D" uid="uid://ujouylc32w0h" path="res://purpleprint.png" id="1_hnsxm"]
+[ext_resource type="Texture2D" uid="uid://ujouylc32w0h" path="res://Sprites/Prints/purpleprint.png" id="1_hnsxm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnsxm"]
 

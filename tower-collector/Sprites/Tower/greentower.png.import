@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dse6s3nm5jcxs"
-path="res://.godot/imported/IdlePlayer.png-d5d587ed40f2ce65bf93fc78fb112efe.ctex"
+uid="uid://s6lfr5o6wwvg"
+path="res://.godot/imported/greentower.png-3ce6924e091b77ebce4a99787ef00b83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://IdlePlayer.png"
-dest_files=["res://.godot/imported/IdlePlayer.png-d5d587ed40f2ce65bf93fc78fb112efe.ctex"]
+source_file="res://Sprites/Tower/greentower.png"
+dest_files=["res://.godot/imported/greentower.png-3ce6924e091b77ebce4a99787ef00b83.ctex"]
 
 [params]
 

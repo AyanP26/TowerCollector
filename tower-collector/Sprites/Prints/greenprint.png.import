@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfd8l0vbj35bu"
-path="res://.godot/imported/fulltower.png-83b9ce48be3eb0b073e805e43c3c00c2.ctex"
+uid="uid://diygtimmsckrm"
+path="res://.godot/imported/greenprint.png-360c79b137a20c8af097cd3862e908cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fulltower.png"
-dest_files=["res://.godot/imported/fulltower.png-83b9ce48be3eb0b073e805e43c3c00c2.ctex"]
+source_file="res://Sprites/Prints/greenprint.png"
+dest_files=["res://.godot/imported/greenprint.png-360c79b137a20c8af097cd3862e908cf.ctex"]
 
 [params]
 

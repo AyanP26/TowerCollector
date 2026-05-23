@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ujouylc32w0h"
-path="res://.godot/imported/purpleprint.png-c7b2771af9eb14f98907ca324b269e5d.ctex"
+uid="uid://217hru6nuysj"
+path="res://.godot/imported/enemyIdle.png-c0302f9a1ac765270d32eec894ed62cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://purpleprint.png"
-dest_files=["res://.godot/imported/purpleprint.png-c7b2771af9eb14f98907ca324b269e5d.ctex"]
+source_file="res://Sprites/Enemy/enemyIdle.png"
+dest_files=["res://.godot/imported/enemyIdle.png-c0302f9a1ac765270d32eec894ed62cf.ctex"]
 
 [params]
 

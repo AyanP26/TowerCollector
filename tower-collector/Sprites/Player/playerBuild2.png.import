@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://550iqehaafxn"
-path="res://.godot/imported/orangetower.png-ade9d57430c6e13d3b3844981a17316b.ctex"
+uid="uid://darei2b1wcbll"
+path="res://.godot/imported/playerBuild2.png-159246b5aa484c80de65adfceb2e5186.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://orangetower.png"
-dest_files=["res://.godot/imported/orangetower.png-ade9d57430c6e13d3b3844981a17316b.ctex"]
+source_file="res://Sprites/Player/playerBuild2.png"
+dest_files=["res://.godot/imported/playerBuild2.png-159246b5aa484c80de65adfceb2e5186.ctex"]
 
 [params]
 

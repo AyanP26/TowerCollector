@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp5b60y2qix4x"
-path="res://.godot/imported/tower3rdpart.png-c8c2f97dd3ec22d6b95b9449a436887d.ctex"
+uid="uid://bfd8l0vbj35bu"
+path="res://.godot/imported/fulltower.png-e07d9a75ba4c5c898cdc9ad7adecd59e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tower3rdpart.png"
-dest_files=["res://.godot/imported/tower3rdpart.png-c8c2f97dd3ec22d6b95b9449a436887d.ctex"]
+source_file="res://Sprites/Tower/fulltower.png"
+dest_files=["res://.godot/imported/fulltower.png-e07d9a75ba4c5c898cdc9ad7adecd59e.ctex"]
 
 [params]
 

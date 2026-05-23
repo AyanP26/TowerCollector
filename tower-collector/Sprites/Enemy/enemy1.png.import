@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diygtimmsckrm"
-path="res://.godot/imported/greenprint.png-51a07cd7cde807348d09ac2d427bf31b.ctex"
+uid="uid://b1ke5hffuaogr"
+path="res://.godot/imported/enemy1.png-db36ed23e23a8f9fbe913f21cf61bc56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://greenprint.png"
-dest_files=["res://.godot/imported/greenprint.png-51a07cd7cde807348d09ac2d427bf31b.ctex"]
+source_file="res://Sprites/Enemy/enemy1.png"
+dest_files=["res://.godot/imported/enemy1.png-db36ed23e23a8f9fbe913f21cf61bc56.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckqtcox211vjo"
-path="res://.godot/imported/orangeprint.png-5a8b5a435173c899b465be2cb9ff266d.ctex"
+uid="uid://h7126ccnv83t"
+path="res://.godot/imported/enemy2.png-f86f94ee9ba57a990cb9f321a23111a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://orangeprint.png"
-dest_files=["res://.godot/imported/orangeprint.png-5a8b5a435173c899b465be2cb9ff266d.ctex"]
+source_file="res://Sprites/Enemy/enemy2.png"
+dest_files=["res://.godot/imported/enemy2.png-f86f94ee9ba57a990cb9f321a23111a8.ctex"]
 
 [params]
 

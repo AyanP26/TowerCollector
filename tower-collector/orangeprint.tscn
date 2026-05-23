@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cuslbpklobak8"]
 
-[ext_resource type="Texture2D" uid="uid://ckqtcox211vjo" path="res://orangeprint.png" id="1_og6m2"]
+[ext_resource type="Texture2D" uid="uid://ckqtcox211vjo" path="res://Sprites/Prints/orangeprint.png" id="1_og6m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxcj0"]
 

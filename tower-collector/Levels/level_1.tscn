@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bvg1q4nxhkc55"]
 
-[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://player.tscn" id="1_3hls8"]
-[ext_resource type="Script" uid="uid://2tk0ivmxvixl" path="res://level_1.gd" id="1_hbghi"]
-[ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://enemy.tscn" id="2_hn12h"]
+[ext_resource type="Script" uid="uid://2tk0ivmxvixl" path="res://Scripts/level_1.gd" id="1_3mhv4"]
+[ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://enemy.tscn" id="2_rf6l5"]
+[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://player.tscn" id="3_syshm"]
 
 [sub_resource type="Curve2D" id="Curve2D_hbghi"]
 _data = {
@@ -11,10 +11,10 @@ _data = {
 point_count = 8
 
 [node name="Level 1" type="Node" unique_id=1680647559]
-script = ExtResource("1_hbghi")
-enemy = ExtResource("2_hn12h")
+script = ExtResource("1_3mhv4")
+enemy = ExtResource("2_rf6l5")
 
-[node name="Player" parent="." unique_id=661569717 instance=ExtResource("1_3hls8")]
+[node name="Player" parent="." unique_id=661569717 instance=ExtResource("3_syshm")]
 
 [node name="EnemyTimer" type="Timer" parent="." unique_id=978226088]
 wait_time = 0.5

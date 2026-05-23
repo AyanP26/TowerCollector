@@ -40,12 +40,13 @@ one_shot = true
 [node name="StartPosition" type="Marker2D" parent="." unique_id=1335761570]
 position = Vector2(240, 450)
 
-[node name="Enemy" parent="." unique_id=2090435787 instance=ExtResource("2_rf6l5")]
-position = Vector2(5, 325)
+[node name="Enemy" parent="." unique_id=2090435787 node_paths=PackedStringArray("follow_path") instance=ExtResource("2_rf6l5")]
+position = Vector2(-81, 274)
 scale = Vector2(0.99999994, 1)
 gravity_scale = 0.0
 freeze = true
 freeze_mode = 1
+follow_path = NodePath("../EnemyPath/EnemyPathFollow")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1684266981]
 z_index = -4

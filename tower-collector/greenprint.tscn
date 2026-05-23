@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://diygtimmsckrm" path="res://greenprint.png" id="1_guom7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sulsx"]
+size = Vector2(78, 59)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4wh2l"]
 animations = [{
@@ -18,8 +19,10 @@ animations = [{
 [node name="greenprint" type="Area2D" unique_id=1016852045]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631461611]
+position = Vector2(823, 483)
 shape = SubResource("RectangleShape2D_sulsx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=849026202]
+position = Vector2(829, 484)
 sprite_frames = SubResource("SpriteFrames_4wh2l")
 animation = &"greenprint"

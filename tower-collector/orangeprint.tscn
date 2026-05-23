@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cuslbpklobak8"]
+
+[ext_resource type="Texture2D" uid="uid://ckqtcox211vjo" path="res://orangeprint.png" id="1_og6m2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxcj0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_okcbk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_og6m2")
+}],
+"loop": true,
+"name": &"orangeprint",
+"speed": 5.0
+}]
+
+[node name="orangeprint" type="Area2D" unique_id=739258626]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1566235711]
+shape = SubResource("RectangleShape2D_lxcj0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=629705493]
+sprite_frames = SubResource("SpriteFrames_okcbk")
+animation = &"orangeprint"

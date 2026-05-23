@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cmc1pnouhwv40"]
+
+[ext_resource type="Texture2D" uid="uid://diygtimmsckrm" path="res://greenprint.png" id="1_guom7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sulsx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4wh2l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_guom7")
+}],
+"loop": true,
+"name": &"greenprint",
+"speed": 5.0
+}]
+
+[node name="greenprint" type="Area2D" unique_id=1016852045]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631461611]
+shape = SubResource("RectangleShape2D_sulsx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=849026202]
+sprite_frames = SubResource("SpriteFrames_4wh2l")
+animation = &"greenprint"

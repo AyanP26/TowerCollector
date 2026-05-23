@@ -1,14 +1,16 @@
 extends Node
 @export var enemy: PackedScene
+@export var blueprint: PackedScene
 var score = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	var blueprint = blueprint.instantiate()
+	add_child(blueprint)
 
 
 func _on_enemy_timer_timeout() -> void:

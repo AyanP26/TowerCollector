@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://gwv2x8udxboy"]
+
+[ext_resource type="Texture2D" uid="uid://ujouylc32w0h" path="res://purpleprint.png" id="1_hnsxm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnsxm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v3k83"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hnsxm")
+}],
+"loop": true,
+"name": &"purpleprint",
+"speed": 5.0
+}]
+
+[node name="purpleprint" type="Area2D" unique_id=575799442]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079724098]
+shape = SubResource("RectangleShape2D_hnsxm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1110005529]
+sprite_frames = SubResource("SpriteFrames_v3k83")
+animation = &"purpleprint"

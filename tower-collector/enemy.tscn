@@ -2,11 +2,16 @@
 
 [ext_resource type="Script" uid="uid://ba3ujau4mrn7u" path="res://Scripts/enemy.gd" id="1_7k104"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k104"]
+
 [node name="Enemy" type="RigidBody2D" unique_id=2090435787]
 script = ExtResource("1_7k104")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=283005926]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2085022293]
+shape = SubResource("RectangleShape2D_7k104")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1506133187]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

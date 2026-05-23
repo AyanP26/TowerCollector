@@ -1,3 +1,24 @@
 [gd_scene format=3 uid="uid://fk8xab7eh776"]
 
+[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://player.tscn" id="1_ll1bl"]
+
+[sub_resource type="Curve2D" id="Curve2D_ll1bl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 79.454025, 223.58908, 0, 0, 0, 0, 120.268555, 223.58908, 0, 0, 0, 0, 129.46303, 176.34877, 0, 0, 0, 0, 181.93884, 168.33327, 0, 0, 0, 0, 220.73508, 212.50381, 0, 0, 0, 0, 171.17459, 241.32552, 0, 0, 0, 0, 267.156, 278.8449, 0, 0, 0, 0, 284.64795, 234.16272, 0, 0, 0, 0, 337.7965, 223.75963)
+}
+point_count = 9
+
 [node name="Level2" type="Node" unique_id=2064000485]
+
+[node name="Player" parent="." unique_id=661569717 instance=ExtResource("1_ll1bl")]
+
+[node name="EnemyTimer" type="Timer" parent="." unique_id=982179253]
+wait_time = 0.5
+
+[node name="EnemyPath" type="Path2D" parent="." unique_id=1055293438]
+position = Vector2(-354.30112, -987.04504)
+scale = Vector2(4.4591966, 5.863636)
+curve = SubResource("Curve2D_ll1bl")
+
+[node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemyPath" unique_id=1756671729]
+position = Vector2(79.454025, 223.58908)

@@ -26,3 +26,16 @@ curve = SubResource("Curve2D_hbghi")
 
 [node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemyPath" unique_id=832085672]
 position = Vector2(79.454025, 223.58908)
+
+[node name="ScoreTimer" type="Timer" parent="." unique_id=1178953772]
+
+[node name="StartTimer" type="Timer" parent="." unique_id=438652545]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Marker2D" parent="." unique_id=1335761570]
+position = Vector2(240, 450)
+
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

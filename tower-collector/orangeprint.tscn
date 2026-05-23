@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ckqtcox211vjo" path="res://Sprites/Prints/orangeprint.png" id="1_og6m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxcj0"]
+size = Vector2(72, 42)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_okcbk"]
 animations = [{
@@ -18,8 +19,10 @@ animations = [{
 [node name="orangeprint" type="Area2D" unique_id=739258626]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1566235711]
+position = Vector2(615, 200)
 shape = SubResource("RectangleShape2D_lxcj0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=629705493]
+position = Vector2(613, 200)
 sprite_frames = SubResource("SpriteFrames_okcbk")
 animation = &"orangeprint"

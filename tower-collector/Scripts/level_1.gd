@@ -1,11 +1,32 @@
 extends Node
 @export var enemy: PackedScene
-@export var blueprint: PackedScene
+
 var score = 0
+var level1enemyamount = 10
+var blueprint = preload("res://blueprint.tscn")
+var purpleprint = preload("res://purpleprint.tscn")
+var orangeprint = preload("res://orangeprint.tscn")
+var greenprint = preload("res://greenprint.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
-
+	for i in range(level1enemyamount):
+		var random_position = Vector2(
+			randf_range(100, 1100),
+			randf_range(100, 600)
+		)
+		var bpinst = blueprint.instantiate()
+		var ppinst = purpleprint.instantiate()
+		var opinst = orangeprint.instantiate()
+		var gpinst = greenprint.instantiate()
+		bpinst.position = random_position
+		ppinst.position = random_position
+		opinst.position = random_position
+		gpinst.position = random_position
+		add_child(bpinst)
+		add_child(ppinst)
+		add_child(opinst)
+		add_child(gpinst)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

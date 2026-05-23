@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://enemy.tscn" id="2_rf6l5"]
 [ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://player.tscn" id="3_syshm"]
 [ext_resource type="Script" uid="uid://dtuu7uplj22xk" path="res://Levels/enemy_path.gd" id="4_rf6l5"]
+[ext_resource type="Texture2D" uid="uid://c3682vrh2fnfg" path="res://background.png" id="4_rf6l5"]
 
 [sub_resource type="Curve2D" id="Curve2D_hbghi"]
 _data = {

@@ -21,11 +21,11 @@ animations = [{
 script = ExtResource("1_3ufgi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=999455557]
-position = Vector2(82.5, 48)
+position = Vector2(289.5, 98)
 shape = SubResource("RectangleShape2D_dnpej")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2107949452]
-position = Vector2(85, 47)
+position = Vector2(292, 97)
 sprite_frames = SubResource("SpriteFrames_3ufgi")
 animation = &"blueprint"
 

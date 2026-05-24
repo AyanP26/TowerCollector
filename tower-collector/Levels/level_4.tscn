@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://csxx4l5la6mr6"]
 
-[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://Nodes/player.tscn" id="1_ftfcu"]
+[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://player.tscn" id="1_ftfcu"]
+[ext_resource type="Script" uid="uid://cn45kis44tjei" path="res://Levels/level_4.gd" id="1_t60mx"]
+[ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://enemy.tscn" id="3_ujo87"]
+[ext_resource type="Texture2D" uid="uid://c3682vrh2fnfg" path="res://background.png" id="4_hvgxt"]
 
 [sub_resource type="Curve2D" id="Curve2D_e78ah"]
 _data = {
@@ -9,6 +12,7 @@ _data = {
 point_count = 12
 
 [node name="Level4" type="Node" unique_id=456528033]
+script = ExtResource("1_t60mx")
 
 [node name="Player" parent="." unique_id=661569717 instance=ExtResource("1_ftfcu")]
 
@@ -22,3 +26,21 @@ curve = SubResource("Curve2D_e78ah")
 
 [node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemyPath" unique_id=850983521]
 position = Vector2(79.454025, 223.58908)
+
+[node name="ScoreTimer" type="Timer" parent="." unique_id=1807675789]
+
+[node name="StartTimer" type="Timer" parent="." unique_id=487860377]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Marker2D" parent="." unique_id=1376110679]
+position = Vector2(240, 450)
+
+[node name="Enemy" parent="." unique_id=2090435787 instance=ExtResource("3_ujo87")]
+z_index = 3
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2072973493]
+z_index = -4
+offset_right = 1198.0
+offset_bottom = 717.0
+texture = ExtResource("4_hvgxt")

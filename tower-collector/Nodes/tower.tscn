@@ -1,13 +1,44 @@
 [gd_scene format=3 uid="uid://pv0m3o22rt5c"]
 
 [ext_resource type="Script" uid="uid://bgvdkhnc8x2ox" path="res://Scripts/tower.gd" id="1_k1sas"]
+[ext_resource type="Texture2D" uid="uid://bidva5n8jbnn4" path="res://Sprites/Tower/towerBase.png" id="2_vxmma"]
+[ext_resource type="Texture2D" uid="uid://cqt8lih4ebsf5" path="res://Sprites/Tower/tower2ndpart.png" id="3_lny5m"]
+[ext_resource type="Texture2D" uid="uid://dp5b60y2qix4x" path="res://Sprites/Tower/tower3rdpart.png" id="4_4ibu2"]
+[ext_resource type="Texture2D" uid="uid://bfd8l0vbj35bu" path="res://Sprites/Tower/fulltower.png" id="5_tdbe0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnc73"]
+size = Vector2(40, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwla6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vxmma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lny5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ibu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tdbe0")
+}],
+"loop": true,
+"name": &"build",
+"speed": 5.0
+}]
 
 [node name="Tower" type="RigidBody2D" unique_id=2142528214]
 script = ExtResource("1_k1sas")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1882600360]
+position = Vector2(56, 25.5)
 shape = SubResource("RectangleShape2D_dnc73")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1005372909]
+position = Vector2(55, 28)
+sprite_frames = SubResource("SpriteFrames_iwla6")
+animation = &"build"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

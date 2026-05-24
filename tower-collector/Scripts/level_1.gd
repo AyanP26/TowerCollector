@@ -1,6 +1,7 @@
 extends Node
 
 @export var enemy: PackedScene
+@export var tower: PackedScene
 
 var score = 0
 var level1enemyamount = 10
@@ -62,6 +63,8 @@ func _ready() -> void:
 	hb2inst.hide()
 	hb3inst.hide()
 	hb4inst.hide()
+	
+	var tower = tower.instantiate()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:	

@@ -139,7 +139,21 @@ func _process(delta):
 				canvas.add_child(label)
 				add_child(canvas)
 				await get_tree().create_timer(2.0).timeout
-				get_tree().change_scene_to_file("res://Levels/level_2.tscn")
+				if get_tree().current_scene.get_name() == "level_1.tscn":
+					get_tree().change_scene_to_file("res://Levels/level_2.tscn")
+				elif get_tree().current_scene.get_name() == "level_2.tscn":
+					get_tree().change_scene_to_file("res://Levels/level_3.tscn")
+				elif get_tree().current_scene.get_name() == "level_3.tscn":
+					get_tree().change_scene_to_file("res://Levels/level_4.tscn")
+				else:
+					var wincanvas = CanvasLayer.new()
+					var winlabel = Label.new()
+					label.text = "You Win!"
+					label.add_theme_font_size_override("font_size", 80)
+					label.add_theme_color_override("font_color", Color(0, 1, 0))
+					label.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+					canvas.add_child(label)
+					add_child(canvas)
 			else:
 				$StartTimer.start()
 	

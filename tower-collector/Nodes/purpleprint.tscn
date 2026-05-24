@@ -21,11 +21,11 @@ animations = [{
 script = ExtResource("1_v3k83")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079724098]
-position = Vector2(286.5, 516)
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_hnsxm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1110005529]
-position = Vector2(288, 516)
+position = Vector2(0, 0)
 sprite_frames = SubResource("SpriteFrames_v3k83")
 animation = &"purpleprint"
 

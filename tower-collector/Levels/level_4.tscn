@@ -1,46 +1,72 @@
-[gd_scene format=3 uid="uid://csxx4l5la6mr6"]
+[gd_scene format=3 uid="uid://bvg1q4nxhkc55"]
 
-[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://player.tscn" id="1_ftfcu"]
-[ext_resource type="Script" uid="uid://cn45kis44tjei" path="res://Levels/level_4.gd" id="1_t60mx"]
-[ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://enemy.tscn" id="3_ujo87"]
-[ext_resource type="Texture2D" uid="uid://c3682vrh2fnfg" path="res://background.png" id="4_hvgxt"]
+[ext_resource type="Script" path="res://Scripts/Levels/level_4.gd" id="1_3mhv4"]
+[ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://Nodes/enemy.tscn" id="2_rf6l5"]
+[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://Nodes/player.tscn" id="3_syshm"]
+[ext_resource type="Texture2D" uid="uid://c3682vrh2fnfg" path="res://Sprites/background.png" id="4_rf6l5"]
+[ext_resource type="Texture2D" uid="uid://bvxlnqwe1fewy" path="res://Sprites/Hotbar/hotbar.png" id="5_rfktq"]
+[ext_resource type="PackedScene" uid="uid://pv0m3o22rt5c" path="res://Nodes/tower.tscn" id="5_syshm"]
 
-[sub_resource type="Curve2D" id="Curve2D_e78ah"]
+[sub_resource type="Curve2D" id="Curve2D_hbghi"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 79.454025, 223.58908, 0, 0, 0, 0, 120.268555, 223.58908, 0, 0, 0, 0, 121.38983, 168.33327, 0, 0, 0, 0, 183.2844, 186.0697, 0, 0, 0, 0, 227.46274, 215.57358, 0, 0, 0, 0, 164.22266, 243.7131, 0, 0, 0, 0, 183.2844, 278.8449, 0, 0, 0, 0, 224.77168, 253.43405, 0, 0, 0, 0, 267.156, 278.8449, 0, 0, 0, 0, 267.156, 223.75963, 0, 0, 0, 0, 306.84924, 237.2325, 0, 0, 0, 0, 337.7965, 223.75963)
+"points": PackedVector2Array(0, 0, 0, 0, 79.454025, 223.58908, 0, 0, 0, 0, 120.268555, 223.58908, 0, 0, 0, 0, 121.38983, 168.33327, 0, 0, 0, 0, 181.93884, 168.33327, 0, 0, 0, 0, 181.93884, 270.65884, 0, 0, 0, 0, 227.2385, 262.98444, 0, 0, 0, 0, 246.07596, 230.92242, 0, 0, 0, 0, 254.37343, 221.71312, 0, 0, 0, 0, 280.16284, 220.00769, 0, 0, 0, 0, 309.5403, 216.59683, 0, 0, 0, 0, 339.14203, 218.30226)
 }
-point_count = 12
+point_count = 11
 
-[node name="Level4" type="Node" unique_id=456528033]
-script = ExtResource("1_t60mx")
+[node name="Level 1" type="Node" unique_id=1680647559]
+script = ExtResource("1_3mhv4")
+enemy = ExtResource("2_rf6l5")
 
-[node name="Player" parent="." unique_id=661569717 instance=ExtResource("1_ftfcu")]
+[node name="Player" parent="." unique_id=661569717 instance=ExtResource("3_syshm")]
+position = Vector2(46, 87)
 
-[node name="EnemyTimer" type="Timer" parent="." unique_id=443241359]
+[node name="EnemyTimer" type="Timer" parent="." unique_id=978226088]
 wait_time = 0.5
 
-[node name="EnemyPath" type="Path2D" parent="." unique_id=53851729]
-position = Vector2(-354.30112, -987.04504)
+[node name="EnemyPath" type="Path2D" parent="." unique_id=461116091]
+position = Vector2(-354.3011, -952.045)
 scale = Vector2(4.4591966, 5.863636)
-curve = SubResource("Curve2D_e78ah")
+curve = SubResource("Curve2D_hbghi")
 
-[node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemyPath" unique_id=850983521]
+[node name="EnemyPathFollow" type="PathFollow2D" parent="EnemyPath" unique_id=832085672]
 position = Vector2(79.454025, 223.58908)
+rotates = false
+loop = false
 
-[node name="ScoreTimer" type="Timer" parent="." unique_id=1807675789]
+[node name="ScoreTimer" type="Timer" parent="." unique_id=1178953772]
 
-[node name="StartTimer" type="Timer" parent="." unique_id=487860377]
+[node name="StartTimer" type="Timer" parent="." unique_id=438652545]
 wait_time = 2.0
 one_shot = true
 
-[node name="StartPosition" type="Marker2D" parent="." unique_id=1376110679]
+[node name="StartPosition" type="Marker2D" parent="." unique_id=1335761570]
 position = Vector2(240, 450)
 
-[node name="Enemy" parent="." unique_id=2090435787 instance=ExtResource("3_ujo87")]
-z_index = 3
+[node name="Enemy" parent="." unique_id=2090435787 node_paths=PackedStringArray("follow_path") instance=ExtResource("2_rf6l5")]
+position = Vector2(-81, 274)
+scale = Vector2(0.99999994, 1)
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
+follow_path = NodePath("../EnemyPath/EnemyPathFollow")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2072973493]
+[node name="Background" type="TextureRect" parent="." unique_id=1684266981]
 z_index = -4
-offset_right = 1198.0
-offset_bottom = 717.0
-texture = ExtResource("4_hvgxt")
+offset_right = 1200.0
+offset_bottom = 720.0
+texture = ExtResource("4_rf6l5")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=954209479]
+visible = false
+offset_left = 956.0
+offset_right = 1200.0
+offset_bottom = 66.0
+texture = ExtResource("5_rfktq")
+
+[node name="Tower" parent="." unique_id=2142528214 instance=ExtResource("5_syshm")]
+visible = false
+position = Vector2(1089, 298)
+
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

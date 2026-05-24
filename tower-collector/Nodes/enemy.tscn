@@ -26,15 +26,18 @@ animations = [{
 size = Vector2(38, 27)
 
 [node name="Enemy" type="RigidBody2D" unique_id=2090435787]
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
 script = ExtResource("1_7k104")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=283005926]
-position = Vector2(48, 34)
+position = Vector2(0, 0)
 sprite_frames = SubResource("SpriteFrames_wujgv")
 animation = &"enemyWalk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2085022293]
-position = Vector2(51, 30.5)
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_7k104")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1506133187]

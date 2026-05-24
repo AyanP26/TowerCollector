@@ -33,11 +33,11 @@ animations = [{
 script = ExtResource("1_k1sas")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1882600360]
-position = Vector2(56, 25.5)
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_dnc73")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1005372909]
-position = Vector2(55, 28)
+position = Vector2(0, 0)
 sprite_frames = SubResource("SpriteFrames_iwla6")
 animation = &"build"
 

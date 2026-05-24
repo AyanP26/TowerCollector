@@ -21,11 +21,11 @@ animations = [{
 script = ExtResource("1_sulsx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631461611]
-position = Vector2(823, 483)
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_sulsx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=849026202]
-position = Vector2(829, 484)
+position = Vector2(0, 0)
 sprite_frames = SubResource("SpriteFrames_4wh2l")
 animation = &"greenprint"
 

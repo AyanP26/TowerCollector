@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bvg1q4nxhkc55"]
 
-[ext_resource type="Script" uid="uid://2tk0ivmxvixl" path="res://Scripts/level_1.gd" id="1_3mhv4"]
+[ext_resource type="Script" uid="uid://2tk0ivmxvixl" path="res://Scripts/Levels/level_1.gd" id="1_3mhv4"]
 [ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://Nodes/enemy.tscn" id="2_rf6l5"]
 [ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://Nodes/player.tscn" id="3_syshm"]
 [ext_resource type="Texture2D" uid="uid://c3682vrh2fnfg" path="res://Sprites/background.png" id="4_rf6l5"]
 [ext_resource type="Texture2D" uid="uid://bvxlnqwe1fewy" path="res://Sprites/Hotbar/hotbar.png" id="5_rfktq"]
-[ext_resource type="PackedScene" uid="uid://pv0m3o22rt5c" path="res://tower.tscn" id="5_syshm"]
+[ext_resource type="PackedScene" uid="uid://pv0m3o22rt5c" path="res://Nodes/tower.tscn" id="5_syshm"]
 
 [sub_resource type="Curve2D" id="Curve2D_hbghi"]
 _data = {
@@ -64,7 +64,8 @@ offset_bottom = 66.0
 texture = ExtResource("5_rfktq")
 
 [node name="Tower" parent="." unique_id=2142528214 instance=ExtResource("5_syshm")]
-position = Vector2(1098, 295)
+visible = false
+position = Vector2(1089, 298)
 
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]

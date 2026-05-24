@@ -1,4 +1,5 @@
 extends Node
+
 @export var enemy: PackedScene
 
 var score = 0
@@ -7,21 +8,22 @@ var blueprint = preload("res://blueprint.tscn")
 var purpleprint = preload("res://purpleprint.tscn")
 var orangeprint = preload("res://orangeprint.tscn")
 var greenprint = preload("res://greenprint.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var screen_size = [1200, 720]
+	
 	for i in range(level1enemyamount):
-		var random_position = Vector2(
-			randf_range(100, 1100),
-			randf_range(100, 600)
-		)
 		var bpinst = blueprint.instantiate()
 		var ppinst = purpleprint.instantiate()
 		var opinst = orangeprint.instantiate()
 		var gpinst = greenprint.instantiate()
-		bpinst.position = random_position
-		ppinst.position = random_position
-		opinst.position = random_position
-		gpinst.position = random_position
+		
+		bpinst.position = Vector2(randf_range(50, screen_size[0] - 50), randf_range(50, screen_size[1] - 50))
+		ppinst.position = Vector2(randf_range(50, screen_size[0] - 50), randf_range(50, screen_size[1] - 50))
+		opinst.position = Vector2(randf_range(50, screen_size[0] - 50), randf_range(50, screen_size[1] - 50))
+		gpinst.position = Vector2(randf_range(50, screen_size[0] - 50), randf_range(50, screen_size[1]))
+		
 		add_child(bpinst)
 		add_child(ppinst)
 		add_child(opinst)
@@ -30,8 +32,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var blueprint = blueprint.instantiate()
-	add_child(blueprint)
+	pass
 	
 func _on_enemy_timer_timeout() -> void:
 	var enemy = enemy.instantiate()

@@ -43,6 +43,6 @@ z_index = 3
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=806403736]
 z_index = -4
-offset_right = 1147.0
-offset_bottom = 650.0
+offset_right = 1205.0
+offset_bottom = 713.0
 texture = ExtResource("3_dgq3b")

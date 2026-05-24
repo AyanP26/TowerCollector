@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cmc1pnouhwv40"]
 
 [ext_resource type="Texture2D" uid="uid://diygtimmsckrm" path="res://Sprites/Prints/greenprint.png" id="1_guom7"]
+[ext_resource type="Script" uid="uid://pp38wsgppqhe" path="res://greenprint.gd" id="1_sulsx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sulsx"]
 size = Vector2(78, 59)
@@ -17,6 +18,7 @@ animations = [{
 }]
 
 [node name="greenprint" type="Area2D" unique_id=1016852045]
+script = ExtResource("1_sulsx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631461611]
 position = Vector2(823, 483)
@@ -26,3 +28,5 @@ shape = SubResource("RectangleShape2D_sulsx")
 position = Vector2(829, 484)
 sprite_frames = SubResource("SpriteFrames_4wh2l")
 animation = &"greenprint"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

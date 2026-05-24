@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cuslbpklobak8"]
 
+[ext_resource type="Script" uid="uid://dg6pxh8xbvyd3" path="res://orangeprint.gd" id="1_lxcj0"]
 [ext_resource type="Texture2D" uid="uid://ckqtcox211vjo" path="res://Sprites/Prints/orangeprint.png" id="1_og6m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxcj0"]
@@ -17,6 +18,7 @@ animations = [{
 }]
 
 [node name="orangeprint" type="Area2D" unique_id=739258626]
+script = ExtResource("1_lxcj0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1566235711]
 position = Vector2(615, 200)
@@ -26,3 +28,5 @@ shape = SubResource("RectangleShape2D_lxcj0")
 position = Vector2(613, 200)
 sprite_frames = SubResource("SpriteFrames_okcbk")
 animation = &"orangeprint"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

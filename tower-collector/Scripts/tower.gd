@@ -22,7 +22,7 @@ func setup(color):
 	elif color == "purpleprint":
 		max_shots = 6
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	show()
 	gravity_scale = 0.0
@@ -55,7 +55,7 @@ func finalize_build():
 
 var lifespan = 30.0
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	if is_built:
 		lifespan -= delta
@@ -76,14 +76,14 @@ func shoot_at_enemy():
 	var closest_dist = range
 
 	for enemy in enemies:
-		if not is_instance_valid(enemy):
+		if is_instance_valid(enemy) == false:
 			continue
 		var dist = global_position.distance_to(enemy.global_position)
 		if dist < closest_dist:
 			closest_dist = dist
 			closest_enemy = enemy
 			
-	if closest_enemy != null and arrow_scene != null:
+	if closest_enemy != null and arrow_scene:
 		var arrow = arrow_scene.instantiate()
 		arrow.speed = 600
 		arrow.global_position = global_position

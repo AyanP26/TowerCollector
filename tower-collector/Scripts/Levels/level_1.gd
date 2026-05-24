@@ -29,8 +29,9 @@ var current_wave = 1
 var enemies_to_spawn = 10
 var enemies_spawned = 0
 var wave_active = false
+var hud_label: Label
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	var path_line = Line2D.new()
 	path_line.points = $EnemyPath.curve.get_baked_points()
@@ -73,10 +74,35 @@ func _ready():
 	add_child(hb3inst)
 	add_child(hb4inst)
 	
-	hb1inst.hide()
+	hbinst.hide()
+	hb1inst.show()
 	hb2inst.hide()
 	hb3inst.hide()
 	hb4inst.hide()
+
+	var hud_canvas = CanvasLayer.new()
+	
+	hud_label = Label.new()
+	hud_label.text = "Level 1 - Wave " + str(current_wave)
+	hud_label.add_theme_font_size_override("font_size", 40)
+	hud_label.add_theme_color_override("font_color", Color(1, 1, 1))
+	hud_label.position = Vector2(20, 20)
+	hud_canvas.add_child(hud_label)
+	
+	var pause_label = Label.new()
+	pause_label.text = "PAUSED"
+	pause_label.add_theme_font_size_override("font_size", 100)
+	pause_label.add_theme_color_override("font_color", Color(1, 1, 0))
+	pause_label.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	pause_label.hide()
+	hud_canvas.add_child(pause_label)
+	
+	var pm = Node.new()
+	pm.set_script(preload("res://Scripts/pause_manager.gd"))
+	pm.pause_label = pause_label
+	hud_canvas.add_child(pm)
+	
+	add_child(hud_canvas)
 
 	$StartTimer.start()
 
@@ -91,11 +117,11 @@ func respawn_print(color):
 	elif color == "purpleprint":
 		new_print = purpleprint.instantiate()
 		
-	if new_print != null:
+	if new_print:
 		new_print.position = Vector2(randf_range(50, screen_size[0] - 50), randf_range(50, screen_size[1] - 50))
 		call_deferred("add_child", new_print)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):	
 	if Input.is_action_just_pressed("hotbar1"):
 		hb1inst.show()
@@ -129,7 +155,10 @@ func _process(delta):
 			current_wave += 1
 			enemies_to_spawn += 5
 			
-			if enemies_to_spawn > 50:
+			if hud_label:
+				hud_label.text = "Level 1 - Wave " + str(current_wave)
+			
+			if enemies_to_spawn > 30:
 				var canvas = CanvasLayer.new()
 				var label = Label.new()
 				label.text = "LEVEL COMPLETE"
@@ -139,21 +168,7 @@ func _process(delta):
 				canvas.add_child(label)
 				add_child(canvas)
 				await get_tree().create_timer(2.0).timeout
-				if get_tree().current_scene.get_name() == "level_1.tscn":
-					get_tree().change_scene_to_file("res://Levels/level_2.tscn")
-				elif get_tree().current_scene.get_name() == "level_2.tscn":
-					get_tree().change_scene_to_file("res://Levels/level_3.tscn")
-				elif get_tree().current_scene.get_name() == "level_3.tscn":
-					get_tree().change_scene_to_file("res://Levels/level_4.tscn")
-				elif get_tree().current_scene.get_name() == "level_4.tscn":
-					var wincanvas = CanvasLayer.new()
-					var winlabel = Label.new()
-					label.text = "You Win!"
-					label.add_theme_font_size_override("font_size", 80)
-					label.add_theme_color_override("font_color", Color(0, 1, 0))
-					label.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-					canvas.add_child(label)
-					add_child(canvas)
+				get_tree().change_scene_to_file("res://Levels/level_2.tscn")
 			else:
 				$StartTimer.start()
 	

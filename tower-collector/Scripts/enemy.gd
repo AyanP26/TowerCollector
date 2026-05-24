@@ -3,16 +3,16 @@ extends RigidBody2D
 @export var follow_path: PathFollow2D
 var speed = 20.0
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	add_to_group("enemies")
 	var enemy_types = Array($AnimatedSprite2D.sprite_frames.get_animation_names())
 	$AnimatedSprite2D.animation = enemy_types.pick_random()
 	$AnimatedSprite2D.play()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _physics_process(delta):
-	if follow_path == null:
+	if not follow_path:
 		return
 	
 	follow_path.progress += speed * delta
@@ -27,5 +27,5 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
 
 func _exit_tree():
-	if follow_path != null and is_instance_valid(follow_path):
+	if follow_path and is_instance_valid(follow_path):
 		follow_path.queue_free()

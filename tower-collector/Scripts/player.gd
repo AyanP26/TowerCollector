@@ -51,7 +51,7 @@ func attack():
 	var closest_dist = 400.0
 
 	for enemy in enemies:
-		if not is_instance_valid(enemy):
+		if is_instance_valid(enemy) == false:
 			continue
 		var dist = global_position.distance_to(enemy.global_position)
 		if dist < closest_dist:
@@ -66,20 +66,20 @@ func attack():
 		get_tree().current_scene.add_child(arrow)
 
 func finish_building():
-	if current_tower != null:
+	if current_tower:
 		current_tower.finalize_build()
 		current_tower = null
 	
 	hotbar[active_slot] = " "
-	if hotbar_sprites[active_slot] != null:
+	if not hotbar_sprites[active_slot] == null:
 		hotbar_sprites[active_slot].queue_free()
 		hotbar_sprites[active_slot] = null
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	screen_size = get_viewport_rect().size
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	if attack_timer > 0:
 		attack_timer -= delta
@@ -110,15 +110,14 @@ func _process(delta):
 			current_tower.queue_free()
 			current_tower = null
 
-	if Input.is_action_just_pressed("build") and vel.length() == 0 and not is_building:
+	if Input.is_action_just_pressed("build") and vel.length() == 0 and is_building == false:
 		if hotbar[active_slot] != " ":
 			is_building = true
 			build_timer = build_duration
 			$AnimatedSprite2D.play("playerBuild")
 			
-			var item = hotbar[active_slot]
 			current_tower = tower_scene.instantiate()
-			current_tower.setup(item)
+			current_tower.setup(hotbar[active_slot])
 			current_tower.global_position = global_position + Vector2(50, 0)
 			get_tree().current_scene.add_child(current_tower)
 			

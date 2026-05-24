@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3682vrh2fnfg"
-path="res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"
+uid="uid://ecl77pkprvok"
+path="res://.godot/imported/hotbar2.png-2bd749b0f64ef90e66e92b3742183428.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background.png"
-dest_files=["res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"]
+source_file="res://Sprites/Hotbar/hotbar2.png"
+dest_files=["res://.godot/imported/hotbar2.png-2bd749b0f64ef90e66e92b3742183428.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bywmqs1jl22ai"]
 
-[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://player.tscn" id="1_cb8d3"]
+[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://Nodes/player.tscn" id="1_cb8d3"]
 
 [sub_resource type="Curve2D" id="Curve2D_5lru4"]
 _data = {

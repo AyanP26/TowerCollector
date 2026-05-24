@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bvg1q4nxhkc55"]
 
 [ext_resource type="Script" uid="uid://2tk0ivmxvixl" path="res://Scripts/level_1.gd" id="1_3mhv4"]
-[ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://enemy.tscn" id="2_rf6l5"]
-[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://player.tscn" id="3_syshm"]
-[ext_resource type="Texture2D" uid="uid://c3682vrh2fnfg" path="res://background.png" id="4_rf6l5"]
+[ext_resource type="PackedScene" uid="uid://3gm3eifc5af5" path="res://Nodes/enemy.tscn" id="2_rf6l5"]
+[ext_resource type="PackedScene" uid="uid://6vhp7hrpbqei" path="res://Nodes/player.tscn" id="3_syshm"]
+[ext_resource type="Texture2D" uid="uid://c3682vrh2fnfg" path="res://Sprites/background.png" id="4_rf6l5"]
+[ext_resource type="Texture2D" uid="uid://bvxlnqwe1fewy" path="res://Sprites/Hotbar/hotbar.png" id="5_rfktq"]
 
 [sub_resource type="Curve2D" id="Curve2D_hbghi"]
 _data = {
@@ -48,11 +49,18 @@ freeze = true
 freeze_mode = 1
 follow_path = NodePath("../EnemyPath/EnemyPathFollow")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1684266981]
+[node name="Background" type="TextureRect" parent="." unique_id=1684266981]
 z_index = -4
 offset_right = 1200.0
 offset_bottom = 720.0
 texture = ExtResource("4_rf6l5")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=954209479]
+visible = false
+offset_left = 956.0
+offset_right = 1200.0
+offset_bottom = 66.0
+texture = ExtResource("5_rfktq")
 
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]

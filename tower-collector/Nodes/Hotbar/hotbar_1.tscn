@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dreyacj6t6u0q"]
+
+[ext_resource type="Texture2D" uid="uid://vpgwxopn612i" path="res://Sprites/Hotbar/hotbar1.png" id="1_17cv0"]
+
+[node name="Hotbar1" type="TextureRect" unique_id=1016882164]
+texture = ExtResource("1_17cv0")

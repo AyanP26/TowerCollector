@@ -2,11 +2,12 @@ extends Area2D
 
 @export var speed = 200
 var screen_size
+var hotbar = [" ", " ", " ", " "]
 
 func attack() -> void:
 	print("attack")
 	# Attack Function Here
-	
+
 func build() -> void:
 	print("build")
 	# Build Function Here

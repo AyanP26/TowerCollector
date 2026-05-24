@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://gwv2x8udxboy"]
 
 [ext_resource type="Texture2D" uid="uid://ujouylc32w0h" path="res://Sprites/Prints/purpleprint.png" id="1_hnsxm"]
+[ext_resource type="Script" uid="uid://fv27buc4ld1h" path="res://purpleprint.gd" id="1_v3k83"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnsxm"]
 size = Vector2(49, 40)
@@ -17,6 +18,7 @@ animations = [{
 }]
 
 [node name="purpleprint" type="Area2D" unique_id=575799442]
+script = ExtResource("1_v3k83")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079724098]
 position = Vector2(286.5, 516)
@@ -26,3 +28,5 @@ shape = SubResource("RectangleShape2D_hnsxm")
 position = Vector2(288, 516)
 sprite_frames = SubResource("SpriteFrames_v3k83")
 animation = &"purpleprint"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -43,7 +43,7 @@ func _on_enemy_timer_timeout() -> void:
 	var velocity = Vector2(randf_range(150.0, 250.0), 0.0)
 	
 	add_child(enemy)	
-
+	
 
 func _on_score_timer_timeout() -> void:
 	score += 1

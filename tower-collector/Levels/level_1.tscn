@@ -18,6 +18,7 @@ script = ExtResource("1_3mhv4")
 enemy = ExtResource("2_rf6l5")
 
 [node name="Player" parent="." unique_id=661569717 instance=ExtResource("3_syshm")]
+z_index = 0
 position = Vector2(46, 87)
 
 [node name="EnemyTimer" type="Timer" parent="." unique_id=978226088]

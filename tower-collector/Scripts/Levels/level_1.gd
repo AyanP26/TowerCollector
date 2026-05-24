@@ -145,7 +145,7 @@ func _process(delta):
 					get_tree().change_scene_to_file("res://Levels/level_3.tscn")
 				elif get_tree().current_scene.get_name() == "level_3.tscn":
 					get_tree().change_scene_to_file("res://Levels/level_4.tscn")
-				else:
+				elif get_tree().current_scene.get_name() == "level_4.tscn":
 					var wincanvas = CanvasLayer.new()
 					var winlabel = Label.new()
 					label.text = "You Win!"
